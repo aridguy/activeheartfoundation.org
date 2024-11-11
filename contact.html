@@ -28,6 +28,8 @@
 
     <!-- Template Main CSS File -->
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 
 </head>
 
@@ -259,7 +261,7 @@
     <script type="text/javascript">
         (function () {
             emailjs.init({
-                publicKey: "tCqgRrnb2CWoV9EH1",
+                publicKey: "Ge-LIrMYMhEMhktOo",
             });
         })();
     </script>
@@ -278,9 +280,15 @@
             };
 
             // Sending email via EmailJS
-            emailjs.send('service_72ju83e', 'template_z6qp864', templateParams)
+            emailjs.send('service_nnceqth', 'template_dowgw4v', templateParams)
                 .then(function (response) {
-                    alert('Message sent successfully!');
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your operation was completed.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                    document.getElementById('contact-form').reset(); // Replace 'yourFormId' with the actual form ID
                 }, function (error) {
                     alert('Failed to send message. Please try again.');
                 });

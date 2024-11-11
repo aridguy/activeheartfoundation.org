@@ -1,243 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>News</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- siteicons -->
-    <link href="images/favicon.png" rel="icon">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="images/favicon.png" rel="icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+      rel="stylesheet"
+      href="pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
     <script src="unpkg.com/swiper%4011.1.12/swiper-bundle.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <!-- aoc animation -->
-    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/contentful/9.1.1/contentful.browser.min.js"></script> -->
+    <script src="https://unpkg.com/contentful@9.1.1/dist/contentful.browser.min.js"></script>
+    <link href="costum.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- start-header -->
     <header id="header" class="d-flex align-items-center">
-        <div class="container p-0">
-            <div class="row align-items-center">
-                <div class="col-md-12 col-lg-12 col-xl-12 col-6 no-caret-1 ">
-                    <nav id="navbar" class="navbar order-last order-lg-0">
-                        <div class="logo no-caret">
-                            <a href="index.html"><img src="images/logo-one.png" alt="../"></a>
-                        </div>
-                        <div class="menu-svg-2">
-                            <svg width="379" height="375" viewBox="0 0 379 375" class="menu-svg" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path id="Extended_image wrap_1" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M363.658 207.092C361.299 249.528 379.085 296.364 352.105 329.199C323.804 363.642 274.43 365.885 230.022 369.727C179.536 374.094 126.031 381.819 84.8221 352.321C37.8307 318.685 -9.48942 263.563 2.81549 207.092C14.8594 151.819 94.7334 151.668 136.787 113.838C174.158 80.2208 180.628 12.002 230.022 2.7056C281.926 -7.06285 337.573 26.3987 366.479 70.6088C392.364 110.199 366.283 159.861 363.658 207.092Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_2" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M347.012 205.201C344.878 243.542 360.966 285.857 336.562 315.523C310.964 346.642 266.305 348.668 226.138 352.139C180.472 356.085 132.077 363.064 94.8025 336.414C52.2984 306.024 9.49688 256.222 20.6268 205.201C31.5207 155.262 103.767 155.126 141.805 120.948C175.607 90.5748 181.46 28.9401 226.138 20.541C273.084 11.7153 323.418 41.9474 349.563 81.8905C372.977 117.66 349.387 162.528 347.012 205.201Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_3" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M329.441 203.205C327.546 237.222 341.841 274.766 320.156 301.087C297.41 328.697 257.728 330.495 222.037 333.574C181.46 337.075 138.458 343.268 105.337 319.622C67.5698 292.659 29.538 248.473 39.4276 203.205C49.1075 158.897 113.303 158.777 147.102 128.452C177.138 101.504 182.338 46.8193 222.037 39.3672C263.752 31.5367 308.476 58.3598 331.709 93.799C352.513 125.535 331.551 165.344 329.441 203.205Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_4" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M310.946 201.104C309.301 230.571 321.709 263.092 302.887 285.892C283.143 309.808 248.7 311.365 217.72 314.033C182.5 317.065 145.175 322.429 116.427 301.947C83.645 278.591 50.6339 240.316 59.2179 201.104C67.6199 162.724 123.341 162.619 152.678 136.351C178.748 113.009 183.262 65.6394 217.72 59.1843C253.929 52.4014 292.749 75.6361 312.914 106.334C330.972 133.825 312.778 168.308 310.946 201.104Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_5" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M295.225 199.318C293.792 224.917 304.596 253.168 288.208 272.975C271.017 293.752 241.026 295.105 214.051 297.422C183.384 300.057 150.884 304.717 125.853 286.923C97.3089 266.633 68.5654 233.383 76.0397 199.318C83.3556 165.976 131.873 165.885 157.418 143.066C180.118 122.787 184.048 81.6366 214.051 76.0288C245.579 70.1363 279.38 90.3209 296.939 116.989C312.662 140.871 296.82 170.827 295.225 199.318Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_6" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M280.429 197.638C279.196 219.595 288.491 243.829 274.392 260.819C259.603 278.64 233.803 279.801 210.598 281.789C184.217 284.049 156.258 288.046 134.724 272.783C110.169 255.379 85.4421 226.857 91.872 197.638C98.1655 169.038 139.903 168.959 161.878 149.385C181.406 131.991 184.787 96.6927 210.598 91.8825C237.72 86.8281 266.798 104.142 281.903 127.017C295.429 147.503 281.801 173.199 280.429 197.638Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_7" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M264.708 195.852C263.688 213.941 271.378 233.906 259.713 247.903C247.476 262.585 226.129 263.541 206.929 265.178C185.101 267.04 161.968 270.333 144.15 257.759C123.833 243.421 103.374 219.924 108.694 195.852C113.901 172.29 148.435 172.226 166.618 156.1C182.775 141.77 185.573 112.69 206.929 108.727C229.37 104.563 253.43 118.827 265.927 137.672C277.119 154.549 265.843 175.718 264.708 195.852Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_8" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M248.062 193.961C247.267 207.954 253.259 223.399 244.17 234.226C234.636 245.584 218.004 246.324 203.044 247.591C186.037 249.031 168.013 251.578 154.131 241.851C138.301 230.759 122.36 212.583 126.505 193.961C130.562 175.734 157.469 175.684 171.636 163.209C184.225 152.124 186.405 129.628 203.044 126.562C220.529 123.341 239.275 134.375 249.012 148.954C257.732 162.009 248.946 178.386 248.062 193.961Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_9" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M230.491 192.07C229.935 201.968 234.134 212.892 227.764 220.55C221.083 228.584 209.427 229.107 198.944 230.003C187.025 231.022 174.394 232.824 164.666 225.944C153.572 218.098 142.401 205.241 145.306 192.07C148.149 179.178 167.005 179.142 176.933 170.319C185.755 162.478 187.283 146.566 198.944 144.398C211.197 142.119 224.333 149.924 231.157 160.236C237.268 169.47 231.111 181.053 230.491 192.07Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                                <path id="Extended_image wrap_10" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M215.695 190.389C215.339 196.646 218.028 203.552 213.948 208.394C209.669 213.473 202.205 213.803 195.49 214.37C187.857 215.014 179.768 216.153 173.537 211.803C166.432 206.844 159.278 198.716 161.138 190.389C162.959 182.239 175.036 182.216 181.394 176.638C187.044 171.681 188.022 161.622 195.49 160.251C203.338 158.811 211.751 163.745 216.122 170.264C220.035 176.102 216.092 183.424 215.695 190.389Z"
-                                    stroke="#fff" stroke-opacity="0.17" stroke-width="0.5" />
-                            </svg>
-                        </div>
-                        <ul>
-                            <li><a class="nav-link scrollto" href="Projects.html">Projects </a></li>
-                            <li><a class="nav-link scrollto" href="about-us.html">About us</a></li>
-                            <li><a class="nav-link scrollto" href="donation.html">Donation</a></li>
-                            <li><a class="nav-link scrollto" href="news.html" style="font-weight: 600;">News</a></li>
-                            <li><a class="nav-link scrollto" href="portfolio.html">Portfolio</a></li>
-                            <li><a class="nav-link scrollto" href="contact.html">Contact us</a></li>
-
-                        </ul>
-                        <div class="wc-btn">
-                            <a href="donation.html" class="btn btn-primary">Donate</a>
-                        </div>
-                    </nav>
-                </div>
-                <!-- .navbar -->
-                <div class="col-md-6 col-lg-3 col-xl-3 no-caret col-6">
-                    <div class="logo no-caret-5">
-                        <a href="index.html"><img src="images/logo-one.png" alt="../"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 col-xl-2 no-caret-2 col-6">
-                    <div class="owl-toggle order-2">
-                        <a href="javascript:;" class="mobile-nav-toggle"><i class="fa fa-bars"></i></a>
-                    </div>
-                    <div class="col-md-3 col-sm-5 d-block d-lg-none wc-btn outer-box">
-                        <a href="donation.html" class="btn btn-primary">Donate</a>
-                    </div>
-                </div>
+      <div class="container p-0">
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-12 col-xl-12 col-6 no-caret-1">
+            <nav id="navbar" class="navbar order-last order-lg-0">
+              <div class="logo no-caret">
+                <a href="index.html"
+                  ><img src="images/logo-one.png" alt="../"
+                /></a>
+              </div>
+              <div class="menu-svg-2">
+                <svg
+                  width="379"
+                  height="375"
+                  viewBox="0 0 379 375"
+                  class="menu-svg"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="Extended_image wrap_1"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M363.658 207.092C361.299 249.528 379.085 296.364 352.105 329.199C323.804 363.642 274.43 365.885 230.022 369.727C179.536 374.094 126.031 381.819 84.8221 352.321C37.8307 318.685 -9.48942 263.563 2.81549 207.092C14.8594 151.819 94.7334 151.668 136.787 113.838C174.158 80.2208 180.628 12.002 230.022 2.7056C281.926 -7.06285 337.573 26.3987 366.479 70.6088C392.364 110.199 366.283 159.861 363.658 207.092Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_2"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M347.012 205.201C344.878 243.542 360.966 285.857 336.562 315.523C310.964 346.642 266.305 348.668 226.138 352.139C180.472 356.085 132.077 363.064 94.8025 336.414C52.2984 306.024 9.49688 256.222 20.6268 205.201C31.5207 155.262 103.767 155.126 141.805 120.948C175.607 90.5748 181.46 28.9401 226.138 20.541C273.084 11.7153 323.418 41.9474 349.563 81.8905C372.977 117.66 349.387 162.528 347.012 205.201Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_3"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M329.441 203.205C327.546 237.222 341.841 274.766 320.156 301.087C297.41 328.697 257.728 330.495 222.037 333.574C181.46 337.075 138.458 343.268 105.337 319.622C67.5698 292.659 29.538 248.473 39.4276 203.205C49.1075 158.897 113.303 158.777 147.102 128.452C177.138 101.504 182.338 46.8193 222.037 39.3672C263.752 31.5367 308.476 58.3598 331.709 93.799C352.513 125.535 331.551 165.344 329.441 203.205Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_4"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M310.946 201.104C309.301 230.571 321.709 263.092 302.887 285.892C283.143 309.808 248.7 311.365 217.72 314.033C182.5 317.065 145.175 322.429 116.427 301.947C83.645 278.591 50.6339 240.316 59.2179 201.104C67.6199 162.724 123.341 162.619 152.678 136.351C178.748 113.009 183.262 65.6394 217.72 59.1843C253.929 52.4014 292.749 75.6361 312.914 106.334C330.972 133.825 312.778 168.308 310.946 201.104Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_5"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M295.225 199.318C293.792 224.917 304.596 253.168 288.208 272.975C271.017 293.752 241.026 295.105 214.051 297.422C183.384 300.057 150.884 304.717 125.853 286.923C97.3089 266.633 68.5654 233.383 76.0397 199.318C83.3556 165.976 131.873 165.885 157.418 143.066C180.118 122.787 184.048 81.6366 214.051 76.0288C245.579 70.1363 279.38 90.3209 296.939 116.989C312.662 140.871 296.82 170.827 295.225 199.318Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_6"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M280.429 197.638C279.196 219.595 288.491 243.829 274.392 260.819C259.603 278.64 233.803 279.801 210.598 281.789C184.217 284.049 156.258 288.046 134.724 272.783C110.169 255.379 85.4421 226.857 91.872 197.638C98.1655 169.038 139.903 168.959 161.878 149.385C181.406 131.991 184.787 96.6927 210.598 91.8825C237.72 86.8281 266.798 104.142 281.903 127.017C295.429 147.503 281.801 173.199 280.429 197.638Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_7"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M264.708 195.852C263.688 213.941 271.378 233.906 259.713 247.903C247.476 262.585 226.129 263.541 206.929 265.178C185.101 267.04 161.968 270.333 144.15 257.759C123.833 243.421 103.374 219.924 108.694 195.852C113.901 172.29 148.435 172.226 166.618 156.1C182.775 141.77 185.573 112.69 206.929 108.727C229.37 104.563 253.43 118.827 265.927 137.672C277.119 154.549 265.843 175.718 264.708 195.852Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_8"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M248.062 193.961C247.267 207.954 253.259 223.399 244.17 234.226C234.636 245.584 218.004 246.324 203.044 247.591C186.037 249.031 168.013 251.578 154.131 241.851C138.301 230.759 122.36 212.583 126.505 193.961C130.562 175.734 157.469 175.684 171.636 163.209C184.225 152.124 186.405 129.628 203.044 126.562C220.529 123.341 239.275 134.375 249.012 148.954C257.732 162.009 248.946 178.386 248.062 193.961Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_9"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M230.491 192.07C229.935 201.968 234.134 212.892 227.764 220.55C221.083 228.584 209.427 229.107 198.944 230.003C187.025 231.022 174.394 232.824 164.666 225.944C153.572 218.098 142.401 205.241 145.306 192.07C148.149 179.178 167.005 179.142 176.933 170.319C185.755 162.478 187.283 146.566 198.944 144.398C211.197 142.119 224.333 149.924 231.157 160.236C237.268 169.47 231.111 181.053 230.491 192.07Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Extended_image wrap_10"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M215.695 190.389C215.339 196.646 218.028 203.552 213.948 208.394C209.669 213.473 202.205 213.803 195.49 214.37C187.857 215.014 179.768 216.153 173.537 211.803C166.432 206.844 159.278 198.716 161.138 190.389C162.959 182.239 175.036 182.216 181.394 176.638C187.044 171.681 188.022 161.622 195.49 160.251C203.338 158.811 211.751 163.745 216.122 170.264C220.035 176.102 216.092 183.424 215.695 190.389Z"
+                    stroke="#fff"
+                    stroke-opacity="0.17"
+                    stroke-width="0.5"
+                  />
+                </svg>
+              </div>
+              <ul>
+                <li>
+                  <a class="nav-link scrollto" href="Projects.html"
+                    >Projects
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="about-us.html">About us</a>
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="donation.html">Donation</a>
+                </li>
+                <li>
+                  <a
+                    class="nav-link scrollto"
+                    href="news.html"
+                    style="font-weight: 600"
+                    >News</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="contact.html"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+              <div class="wc-btn">
+                <a href="donation.html" class="btn btn-primary">Donate</a>
+              </div>
+            </nav>
+          </div>
+          <!-- .navbar -->
+          <div class="col-md-6 col-lg-3 col-xl-3 no-caret col-6">
+            <div class="logo no-caret-5">
+              <a href="index.html"
+                ><img src="images/logo-one.png" alt="../"
+              /></a>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-2 no-caret-2 col-6">
+            <div class="owl-toggle order-2">
+              <a href="javascript:;" class="mobile-nav-toggle"
+                ><i class="fa fa-bars"></i
+              ></a>
+            </div>
+            <div class="col-md-3 col-sm-5 d-block d-lg-none wc-btn outer-box">
+              <a href="donation.html" class="btn btn-primary">Donate</a>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
     <!-- End Header -->
 
-
     <div class="main-wrapper">
-        <div class="page">
-            <!-- <===== Start-news-section =====> -->
-            <section class="wc-news">
-                <div class="container p-0">
-                    <div class="row">
-                        <div class="col-12 p-0">
-                            <div class="news-title">
-                                <h2 data-aos="fade-down" data-aos-duration="1500">Latest News</h2>
-                                <p data-aos="fade-up" data-aos-duration="1500">We're gearing up for a busy few months
-                                    ahead, with several new initiatives and programs set to launch. Here's a sneak
-                                    peek at what's in store:</p>
-                            </div>
-                            <div class="news-wrapper">
-                                <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-2.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>Education for All</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Empowering
-                                            Disadvantaged Communities through Learning</a></h2>
-                                </div>
-                                <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-1.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>Impactful Events</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Mark your calendars for a series of exciting events,
-                                            including workshops, webinars, and fundraising
-                                            campaigns, all designed to make a difference in our community.</a></h2>
-                                </div>
-                                <!-- <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-3.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>10 jun,2022</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Itaque earum rerum hic tenetur a sapiente delectus,
-                                            ut aut reiciendis</a></h2>
-                                </div>
-                                <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-4.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>10 jun,2022</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Itaque earum rerum hic tenetur a sapiente delectus,
-                                            ut aut reiciendis</a></h2>
-                                </div>
-                                <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-5.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>10 jun,2022</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Itaque earum rerum hic tenetur a sapiente delectus,
-                                            ut aut reiciendis</a></h2>
-                                </div>
-                                <div class="news-content" data-aos="zoom-in" data-aos-duration="1500">
-                                    <a href="news-details.html"><img src="images/news-6.jpg" alt="../"></a>
-                                    <div class="date">
-                                        <p>10 jun,2022</p>
-                                        <a href="news-details.html"><i class="fa fa-arrow-right"></i></a>
-                                    </div>
-                                    <h2><a href="news-details.html">Itaque earum rerum hic tenetur a sapiente delectus,
-                                            ut aut reiciendis</a></h2>
-                                </div> -->
-                            </div>
-                            <div class="wc-btn" data-aos="fade-up" data-aos-duration="1500">
-                                <a href="#" class="btn btn-primary">Load More</a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="page">
+        <!-- <===== Start-news-section =====> -->
+        <section class="wc-news">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col-12 p-0">
+                <div class="news-title">
+                  <h2 data-aos="fade-down" data-aos-duration="1500">
+                    Latest News
+                  </h2>
+                  <p data-aos="fade-up" data-aos-duration="1500">
+                    We're gearing up for a busy few months ahead, with several
+                    new initiatives and programs set to launch. Here's a sneak
+                    peek at what's in store:
+                  </p>
                 </div>
-            </section>
-        </div>
-        <!-- <===== End-news-section =====> -->
-
-        <!-- <!=== start-footer-section =====> -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 p-0">
-                        <div class="footer-content">
-                            <a href="index.html" class="logo">
-                                <img src="images/logo-one.png" alt="Active Heart Foundation Logo">
-                            </a>
-                            <p>Be a catalyst of change!</p>
-                            <div class="footer-copyright">
-                                <a href="#" style="margin-right: 10px;">@ 2024 Active Heart Foundation</a>/
-                                <a href="#" style="margin-right: 10px; margin-left:10px">Terms Of Site</a>/
-                                <a href="#" style="margin-right: 10px; margin-left:10px">Legal</a>
-                            </div>
-                            <div class="social-icon">
-                                <a href="https://www.facebook.com/activeheartfoundation.org" target="_blank"
-                                    rel="noopener noreferrer" aria-label="Facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com/activeheartfoundation_org" target="_blank"
-                                    rel="noopener noreferrer" aria-label="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/activeheartfoundation" target="_blank"
-                                    rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://tiktok.com/activeheartfoundation" target="_blank"
-                                    rel="noopener noreferrer" aria-label="TikTok">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-                                <a href="https://www.twitter.com/activeheartf" target="_blank" rel="noopener noreferrer"
-                                    aria-label="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.youtube.com/activeheartfoundation_org" target="_blank"
-                                    rel="noopener noreferrer" aria-label="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="news-wrapper">
+                  <div
+                    class="row"
+                    id="news-container"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                  >
+                    <!-- Dynamically added news items will be inserted here -->
+                  </div>
+                  <!-- Container for dynamically added news items -->
                 </div>
+                <div class="wc-btn" data-aos="fade-up" data-aos-duration="1500">
+                  <a href="#" class="btn btn-primary">Load More</a>
+                </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </section>
+      </div>
+      <!-- <===== End-news-section =====> -->
 
-        <!-- <!=== End-footer-section =====> -->
+      <!-- <!=== start-footer-section =====> -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 p-0">
+              <div class="footer-content">
+                <a href="index.html" class="logo">
+                  <img
+                    src="images/logo-one.png"
+                    alt="Active Heart Foundation Logo"
+                  />
+                </a>
+                <p>Be a catalyst of change!</p>
+                <div class="footer-copyright">
+                  <a href="#" style="margin-right: 10px"
+                    >@ 2024 Active Heart Foundation</a
+                  >/
+                  <a href="#" style="margin-right: 10px; margin-left: 10px"
+                    >Terms Of Site</a
+                  >/
+                  <a href="#" style="margin-right: 10px; margin-left: 10px"
+                    >Legal</a
+                  >
+                </div>
+                <div class="social-icon">
+                  <a
+                    href="https://www.facebook.com/activeheartfoundation.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/activeheartfoundation_org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/activeheartfoundation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://tiktok.com/activeheartfoundation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                  >
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+                  <a
+                    href="https://www.twitter.com/activeheartf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/activeheartfoundation_org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- <!=== End-footer-section =====> -->
     </div>
+
+    <!-- CONTENTFUL API CALL, RENDERING THE NEWS CONTENTS TO THE WEBSITE -->
+    <script>
+      const client = contentful.createClient({
+        space: "xnrh29ve6y1c",
+        environment: "master",
+        accessToken: "gmPIMcjGzOx8cxxWp05AN1KPcOseN_2FCrBXCDZEZrQ",
+      });
+
+      client
+        .getEntries()
+        .then((response) => {
+          const newsContainer = document.getElementById("news-container");
+
+          response.items.forEach((entry) => {
+            const newsTitle = entry.fields.newsTitle;
+            const newsDescription = entry.fields.newsSubtitle;
+            const newsImage = entry.fields.newsImages[0]?.fields.file.url;
+            const newsId = entry.sys.id;
+
+            // Create HTML for each news item
+            const newsItem = document.createElement("div");
+            newsItem.className = "col-md-4";
+
+            newsItem.innerHTML = `
+                    <a href="news-details.html?newsId=${newsId}">
+                      <img src="https:${newsImage}" alt="news-image" />
+                    </a>
+                    <div class="date">
+                      <b class="lead fw-5">${newsTitle}</b>
+                      <a title="details" href="news-details.html?newsId=${newsId}">
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                      <p class="text-black">
+                      <a class="text-black" href="news-details.html?newsId=${newsId}" title="${newsDescription}">
+                        ${newsDescription}
+                      </a>
+                    </p>
+                    </div>
+                    
+                  `;
+
+            newsContainer.appendChild(newsItem);
+          });
+        })
+        .catch(console.error);
+    </script>
 
     <!-- Template Main JS File -->
     <script src="js/jquery.min.js"></script>
@@ -250,6 +389,5 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -3093,13 +3093,13 @@ body.transperent.main-error #header.header-scrolled {
   max-width: 1064px;
 }
 
-.wc-news .news-wrapper {
+/* .wc-news .news-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 144px;
   grid-row-gap: 50px;
   margin-bottom: 70px;
-}
+} */
 
 .wc-news .news-title {
   padding-bottom: 50px;
