@@ -337,10 +337,11 @@
         space: "xnrh29ve6y1c",
         environment: "master",
         accessToken: "gmPIMcjGzOx8cxxWp05AN1KPcOseN_2FCrBXCDZEZrQ",
+        
       });
 
       client
-        .getEntries()
+        .getEntries({ content_type: "news" })
         .then((response) => {
           const newsContainer = document.getElementById("news-container");
 
