@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portfolio</title>
+    <title>Gallery</title>
+
+    <!-- PhotoSwipe CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@5/dist/photoswipe.css"
+    />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- siteicons -->
@@ -35,29 +42,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/contentful/9.1.1/contentful.browser.min.js"></script> -->
     <script src="https://unpkg.com/contentful@9.1.1/dist/contentful.browser.min.js"></script>
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            gap: 16px; /* Space between items */
-        }
-
-        .portfolio-content {
-            border: 1px solid #ddd; /* Optional: Add a border to each portfolio item */
-            padding: 16px; /* Optional: Add padding */
-            background-color: #f9f9f9; /* Optional: Background color */
-        }
-
-        .portfolio-description {
-            font-weight: bold; /* Optional: Style the description */
-            margin-bottom: 8px; /* Space below the description */
-        }
-
-        .col-md-4 {
-            display: flex; /* Center images */
-            justify-content: center; /* Center images horizontally */
-        }
-    </style>
+    <link href="costum.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -175,23 +160,29 @@
               </div>
               <ul>
                 <li>
-                  <a class="nav-link scrollto" href="about-us.html">About us</a>
+                  <a class="nav-link scrollto" href="Projects.html"
+                    >Projects
+                  </a>
                 </li>
                 <li>
-                  <a class="nav-link scrollto" href="projects,html">Project</a>
+                  <a class="nav-link scrollto" href="about-us.html">About us</a>
                 </li>
                 <li>
                   <a class="nav-link scrollto" href="donation.html">Donation</a>
                 </li>
                 <li>
-                  <a class="nav-link scrollto" href="donation.html">Gallery</a>
-                </li>
-                <li><a class="nav-link scrollto" href="news.html">News</a></li>
-                <li>
                   <a
                     class="nav-link scrollto"
-                    href="portfolio.html"
+                    href="gallery.html"
                     style="font-weight: 600"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="news.html">News</a>
+                </li>
+                <li>
+                  <a class="nav-link scrollto" href="portfolio.html"
                     >Portfolio</a
                   >
                 </li>
@@ -230,38 +221,149 @@
     <!-- End Header -->
 
     <div class="main-wrapper">
-      <div class="page portfolio-page">
-        <!-- <===== Start-portfolio-section =====> -->
-        <section class="wc-portfolio">
+      <div class="page">
+        <!-- <===== Start-news-section =====> -->
+        <section class="wc-news">
           <div class="container p-0">
             <div class="row">
               <div class="col-12 p-0">
-                <div class="portfolio-title">
+                <div class="news-title">
                   <h2 data-aos="fade-down" data-aos-duration="1500">
-                    Welcome to Our Portfolio
+                    Photo Galleries
                   </h2>
-                  <p
-                    id="prtfolioContents"
-                    data-aos="fade-up"
-                    data-aos-duration="1500"
-                  >
-                    We're proud to showcase our accomplishments and the impact
-                    we've made in the community. Our portfolio highlights our
-                    achievements, success stories, and the difference we've made
-                    in the lives of individuals and families.
+                  <p data-aos="fade-up" data-aos-duration="1500">
+                    "No photo truly captures the impactful experiences of
+                    visiting the communities and outreach centers supported by
+                    Active Heart Foundation. However, life’s demands, distance,
+                    and other factors often keep us from these moments
+                    firsthand. That’s why we’ve made these exclusive images
+                    available for you! Our gallery offers a glimpse into the
+                    heart of our work, highlighting the many ways we’re making a
+                    difference."
                   </p>
-                </div>
-                <div class="container">
-                    <div class="portfolio-grid row" id="portfolio-grid">
-                        <!-- JavaScript will insert portfolio items here dynamically -->
-                      </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- starting the gallery section of the application -->
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <!-- Add each image in a swiper-slide div as before -->
+                    <div  class="swiper-slide">
+                      <img
+                        src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 1"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 2"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1683134055585-3d84cb07b60e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Slide 3"
+                      />
+                    </div>
+                    <!-- Additional slides... -->
+                  </div>
+                  <!-- Swiper Pagination and Navigation Buttons -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .swiper-container {
+              width: 100%;
+              max-width: 800px; /* Adjust container width */
+              margin: 0 auto;
+            }
+            .swiper-slide img {
+              width: 100%; /* Full width inside each slide */
+              object-fit: cover; /* Keeps image scaled within bounds */
+              border-radius: 8px; /* Optional: rounds the corners of images */
+            }
+          </style>
+          <!-- Swiper Container -->
+
+          <!-- ending the gallery section of the application -->
         </section>
       </div>
-      <!-- <===== End-portfolio-section =====> -->
 
       <!-- <!=== start-footer-section =====> -->
       <footer class="footer">
@@ -345,66 +447,87 @@
 
       <!-- <!=== End-footer-section =====> -->
     </div>
+    <!-- PhotoSwipe JS -->
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper@11.1.12/swiper-bundle.min.js"></script> -->
+
+    <script>
+      // Initialize Swiper with spacing and responsive breakpoints
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        spaceBetween: 10, // Adds space between slides
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
 
     <!-- CONTENTFUL API CALL, RENDERING THE NEWS CONTENTS TO THE WEBSITE -->
     <script>
-        // Initialize Contentful client
-        const client = contentful.createClient({
-            space: "xnrh29ve6y1c",
-            environment: "master",
-            accessToken: "lSWaJI-MRuA-ZD4tXykLABB3bcTylUWSipxCQiMFTWg",
-        });
-    
-        client
-            .getEntries({ content_type: "portfolio" })
-            .then((response) => {
-                const portfolioGrid = document.getElementById("portfolio-grid");
-                if (!portfolioGrid) {
-                    console.error("Element with id 'portfolio-grid' not found.");
-                    return;
-                }
-    
-                response.items.forEach((entry) => {
-                    const portfolioImages = entry.fields.portfolioImages;
-                    const portfolioDescription = entry.fields.portfolioDescription;
-    
-                    if (!portfolioImages || !portfolioDescription) {
-                        console.warn("Missing image or description for entry:", entry);
-                        return;
-                    }
-    
-                    // Create a container for each portfolio entry
-                    const portfolioContent = document.createElement("div");
-                    portfolioContent.className = "portfolio-content";
-    
-                    // Add the description (only once per entry)
-                    const descriptionElement = document.createElement("p");
-                    descriptionElement.className = "portfolio-description";
-                    descriptionElement.textContent = portfolioDescription;
-                    portfolioContent.appendChild(descriptionElement);
-    
-                    // Add each image within the same entry below the description
-                    portfolioImages.forEach((image) => {
-                        const portfolioImageUrl = image.fields.file.url;
-    
-                        const imageWrapper = document.createElement("div");
-                        imageWrapper.className = "col-md-4";
-    
-                        imageWrapper.innerHTML = `
-                            <img src="https:${portfolioImageUrl}" alt="${portfolioDescription}" loading="lazy" />
-                        `;
-    
-                        portfolioContent.appendChild(imageWrapper);
-                    });
-    
-                    // Append the portfolio content to the main grid
-                    portfolioGrid.appendChild(portfolioContent);
-                });
-            })
-            .catch(console.error);
+      const client = contentful.createClient({
+        space: "xnrh29ve6y1c",
+        environment: "master",
+        accessToken: "gmPIMcjGzOx8cxxWp05AN1KPcOseN_2FCrBXCDZEZrQ",
+      });
+
+      client
+        .getEntries({ content_type: "news" })
+        .then((response) => {
+          const newsContainer = document.getElementById("news-container");
+
+          response.items.forEach((entry) => {
+            const newsTitle = entry.fields.newsTitle;
+            const newsDescription = entry.fields.newsSubtitle;
+            const newsImage = entry.fields.newsImages[0]?.fields.file.url;
+            const newsId = entry.sys.id;
+
+            // Create HTML for each news item
+            const newsItem = document.createElement("div");
+            newsItem.className = "col-md-4";
+
+            newsItem.innerHTML = `
+                    <a href="news-details.html?newsId=${newsId}">
+                      <img src="https:${newsImage}" alt="news-image" loading="lazy" />
+                    </a>
+                    <div class="date">
+                      <b class="lead fw-5">${newsTitle}</b>
+                      <a title="details" href="news-details.html?newsId=${newsId}">
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                      <p class="text-black">
+                      <a class="text-black" href="news-details.html?newsId=${newsId}" title="${newsDescription}">
+                        ${newsDescription}
+                      </a>
+                    </p>
+                    </div>
+                    
+                  `;
+
+            newsContainer.appendChild(newsItem);
+          });
+        })
+        .catch(console.error);
     </script>
-    
-    
 
     <!-- Template Main JS File -->
     <script src="js/jquery.min.js"></script>
@@ -430,9 +553,5 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
-
-    <style>
-        
-    </style>
   </body>
 </html>

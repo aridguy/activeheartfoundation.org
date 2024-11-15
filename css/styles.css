@@ -1834,15 +1834,15 @@ button.lets-play {
   max-width: 44%;
 }
 
-.wc-portfolio .portfolio-grid {
+/* .wc-portfolio .portfolio-grid {
   display: flex;
   flex-wrap: wrap;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
   margin-bottom: 80px;
-}
-
-.wc-portfolio .portfolio-grid .portfolio-content {
+} */
+/*  */
+/* .wc-portfolio .portfolio-grid .portfolio-content {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -1858,9 +1858,9 @@ button.lets-play {
   z-index: 2;
   opacity: 0;
   cursor: pointer;
-}
+} */
 
-.wc-portfolio .portfolio-grid .portfolio-content:hover::before {
+/* .wc-portfolio .portfolio-grid .portfolio-content:hover::before {
   top: 0;
   left: 0;
   right: 0;
@@ -1882,9 +1882,9 @@ button.lets-play {
   z-index: 3;
   transition: all ease-in-out 0.3s;
   padding: 0 40px 40px;
-}
+} */
 
-.wc-portfolio .portfolio-grid .portfolio-content:hover .portfolio-info {
+/* .wc-portfolio .portfolio-grid .portfolio-content:hover .portfolio-info {
   opacity: 1;
 }
 
@@ -1898,9 +1898,9 @@ button.lets-play {
 
 .wc-portfolio .portfolio-info h2 a:hover {
   color: #0f854d;
-}
+} */
 
-.wc-portfolio .wc-btn {
+/* .wc-portfolio .wc-btn {
   text-align: center;
 }
 
@@ -1909,7 +1909,7 @@ button.lets-play {
   padding: 20px 45px 18px;
   border-radius: 50px;
   margin: 0 auto;
-}
+} */
 
 .wc-portfolio .wc-btn .btn.btn-primary:active,
 .wc-portfolio .wc-btn .btn.btn-primary:focus,
