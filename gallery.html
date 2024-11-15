@@ -228,19 +228,31 @@
             <div class="row">
               <div class="col-12 p-0">
                 <div class="news-title">
-                  <h2 data-aos="fade-down" data-aos-duration="1500">
-                    Photo Galleries
-                  </h2>
-                  <p data-aos="fade-up" data-aos-duration="1500">
-                    "No photo truly captures the impactful experiences of
-                    visiting the communities and outreach centers supported by
-                    Active Heart Foundation. However, life’s demands, distance,
-                    and other factors often keep us from these moments
-                    firsthand. That’s why we’ve made these exclusive images
-                    available for you! Our gallery offers a glimpse into the
-                    heart of our work, highlighting the many ways we’re making a
-                    difference."
-                  </p>
+                  <div
+                    style="
+                      background-image: url('/images/gallery/banner.jpg');
+                      background-size: cover;
+                      background-position: center;
+                      padding: 100px 0;
+                      color: white;
+                      text-align: center;
+                    "
+                  >
+                    <h2 class="text-white" data-aos="fade-down" data-aos-duration="1500">
+                      Photo Galleries
+                    </h2>
+                    <span class="" data-aos="fade-up" data-aos-duration="1500">
+                      "No photo truly captures the impactful experiences of
+                      visiting the communities and outreach centers supported by
+                      Active Heart Foundation. However, life’s demands, distance,
+                      and other factors often keep us from these moments
+                      firsthand. That’s why we’ve made these exclusive images
+                      available for you! Our gallery offers a glimpse into the
+                      heart of our work, highlighting the many ways we’re making a
+                      difference."
+                    </span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -253,7 +265,7 @@
                 <div class="swiper-container">
                   <div class="swiper-wrapper">
                     <!-- Add each image in a swiper-slide div as before -->
-                    <div  class="swiper-slide">
+                    <div class="swiper-slide">
                       <img
                         src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Slide 1"
@@ -364,6 +376,34 @@
           <!-- ending the gallery section of the application -->
         </section>
       </div>
+      <section class="mt-5">
+        <div class="container-fluid p-0">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="call_to_action text-center d-flex flex-column align-items-center justify-content-center"
+                style="height: 150px"
+              >
+                <span class="lead text-white"
+                  >The Best Way to Make a Difference in the Lives of
+                  Others</span
+                >
+                <a
+                  href="contact.html"
+                  role="button"
+                  class="btn btn-success mt-3"
+                  >DONATE NOW</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .call_to_action {
+          background-color: rgba(0, 128, 0, 0.842);
+        }
+      </style>
 
       <!-- <!=== start-footer-section =====> -->
       <footer class="footer">
@@ -541,17 +581,19 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/672804822480f5b4f5982890/1ibq537pg';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/672804822480f5b4f5982890/1ibq537pg";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>
