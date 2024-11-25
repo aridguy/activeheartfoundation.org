@@ -166,11 +166,7 @@
                   <a class="nav-link scrollto" href="gallery.html">Gallery</a>
                 </li>
                 <li><a class="nav-link scrollto" href="news.html">News</a></li>
-                <li>
-                  <a class="nav-link scrollto" href="portfolio.html"
-                    >Portfolio</a
-                  >
-                </li>
+                
                 <li>
                   <a
                     class="nav-link scrollto"
@@ -223,10 +219,10 @@
                         <div class="row">
                           <div class="col-12">
                             <div class="contact-title">
-                              <h2 data-aos="fade-up" data-aos-duration="1500">
+                              <h1 data-aos="fade-up" data-aos-duration="1500">
                                 We'd love to hear from you!
-                              </h2>
-                              <p data-aos="fade-up" data-aos-duration="1500">
+                              </h1>
+                              <p class="lead" data-aos="fade-up" data-aos-duration="1500">
                                 Reach out to us to learn more about our
                                 initiatives, share your ideas, or to
                                 collaborate.
@@ -315,7 +311,16 @@
                       data-aos-duration="1500"
                     >
                       <p>
-                        <a href="tel:+1 941-725-4236">+1 941-725-4236 </a>
+                        <a href="tel:+234 903-790-8480">+234 (90) 3790 8480 </a>
+                      </p>
+                    </div>
+                    <div
+                      class="address"
+                      data-aos="flip-up"
+                      data-aos-duration="1500"
+                    >
+                      <p>
+                        <a href="tel:+234 901-599-9531">+234 (90) 1599 9531 </a>
                       </p>
                     </div>
                     <div
@@ -325,7 +330,7 @@
                     >
                       <p>
                         <a href="mailto:support@activeheartfoundation.org"
-                          >support@activeheartfoundation.org</a
+                          >support@activeheartsfoundation.com</a
                         >
                       </p>
                     </div>
@@ -478,14 +483,20 @@
               function (response) {
                 Swal.fire({
                   title: "Success!",
-                  text: "Your operation was completed.",
+                  text: "Message sent successfully.",
                   icon: "success",
                   confirmButtonText: "OK",
                 });
                 document.getElementById("contact-form").reset(); // Replace 'yourFormId' with the actual form ID
               },
               function (error) {
-                alert("Failed to send message. Please try again.");
+                // alert("Failed to send message. Please try again.");
+                Swal.fire({
+                  title: "Success!",
+                  text: "Failed to send message.",
+                  icon: "error",
+                  confirmButtonText: "OK",
+                });
               }
             );
         });
