@@ -7718,9 +7718,9 @@ a.mobile-nav-toggle .svg-inline--fa.fa-xmark {
     padding: 40px;
   }
 
-  .wc-donation .donation-inner img {
-    width: 100%;
-    height: 100%;
+  .donaImg {
+    width: 50%;
+    height: 50%;
   }
 
   .wc-donation .donation-inner {
